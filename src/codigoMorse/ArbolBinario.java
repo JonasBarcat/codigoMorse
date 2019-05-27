@@ -58,7 +58,15 @@ public class ArbolBinario {
     }
     
     public static boolean Pertenece(ArbolBinario AB,char dato){
-        return AB.getItem()==dato;
+        if(esABvacio(AB)){
+            return false;
+        }else{
+            if(AB.getItem()==dato){
+                return true;
+            }else{
+              return (Pertenece(AB.getIzquierdo(),dato) || Pertenece(AB.getDerecho(),dato)); 
+            }
+        }
     }
     
     
