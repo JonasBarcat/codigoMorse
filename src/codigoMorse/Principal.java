@@ -16,26 +16,26 @@ public class Principal {
      */
     public static void main(String[] args) {
         
-           ArbolBinario vacio=ArbolBinario.ABvacio(' ');// nodos vacios ultimo nivel
+           ArbolBinario vacio=ArbolBinario.ABvacio();// nodos vacios ultimo nivel
            
         
 
          
         
         //nivel 5
-        ArbolBinario cero=ArbolBinario.ABvacio('0');
-        ArbolBinario uno=ArbolBinario.ABvacio('1');
-        ArbolBinario dos=ArbolBinario.ABvacio('2');
-        ArbolBinario tres=ArbolBinario.ABvacio('3');
-        ArbolBinario cuatro=ArbolBinario.ABvacio('4');
-        ArbolBinario cinco=ArbolBinario.ABvacio('5');
-        ArbolBinario seis=ArbolBinario.ABvacio('6');
-        ArbolBinario siete=ArbolBinario.ABvacio('7');
-        ArbolBinario ocho=ArbolBinario.ABvacio('8');
-        ArbolBinario nueve=ArbolBinario.ABvacio('9');
-        ArbolBinario suma=ArbolBinario.ABvacio('+');
-        ArbolBinario igual=ArbolBinario.ABvacio('=');
-        ArbolBinario division=ArbolBinario.ABvacio('/');
+        ArbolBinario cero=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'0',ArbolBinario.ABvacio());
+        ArbolBinario uno=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'1',ArbolBinario.ABvacio());
+        ArbolBinario dos=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'2',ArbolBinario.ABvacio());
+        ArbolBinario tres=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'3',ArbolBinario.ABvacio());
+        ArbolBinario cuatro=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'4',ArbolBinario.ABvacio());
+        ArbolBinario cinco=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'5',ArbolBinario.ABvacio());
+        ArbolBinario seis=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'6',ArbolBinario.ABvacio());
+        ArbolBinario siete=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'7',ArbolBinario.ABvacio());
+        ArbolBinario ocho=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'8',ArbolBinario.ABvacio());
+        ArbolBinario nueve=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'9',ArbolBinario.ABvacio());
+        ArbolBinario suma=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'+',ArbolBinario.ABvacio());
+        ArbolBinario igual=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'=',ArbolBinario.ABvacio());
+        ArbolBinario division=ArbolBinario.armarAB(ArbolBinario.ABvacio(),'/',ArbolBinario.ABvacio());
      
         //nivel 4
         ArbolBinario H=ArbolBinario.armarAB(cinco, 'H',cuatro);

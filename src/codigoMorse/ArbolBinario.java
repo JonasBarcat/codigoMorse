@@ -12,36 +12,31 @@ package codigoMorse;
 public class ArbolBinario {
     
     private ArbolBinario izquierdo;
-    private char item;
+    private Character raiz;
     private ArbolBinario derecho;
 
     
     public ArbolBinario() {
     }
-    
-    public ArbolBinario(char valor) {
-        this.izquierdo =null;
-        this.item = valor;
-        this.derecho = null;
-    }
 
  //  ADT ARBOL BINARIO DESDE AQUI EN ADELANTE   
     
-    public static ArbolBinario ABvacio(char caracter){
-        ArbolBinario vacio=new ArbolBinario(caracter);
-        return vacio;
+    public static ArbolBinario ABvacio(){
+        ArbolBinario AB=new ArbolBinario();
+        return AB;
     }
     
     public static boolean esABvacio(ArbolBinario AB){
-    return AB==null;
+    return AB.raiz==null && AB.izquierdo==null && AB.derecho==null;
     }
     
     
-    public static ArbolBinario armarAB(ArbolBinario izq,char dato,ArbolBinario der){
-        ArbolBinario nuevo=new ArbolBinario(dato);
-        nuevo.setIzquierdo(izq);
-        nuevo.setDerecho(der);
-        return nuevo;
+    public static ArbolBinario armarAB(ArbolBinario izq,Character raiz,ArbolBinario der){
+        ArbolBinario nuevoAB=new ArbolBinario();
+        nuevoAB.setItem(raiz);
+        nuevoAB.setIzquierdo(izq);
+        nuevoAB.setDerecho(der);
+        return nuevoAB;
     }
     
     
@@ -57,20 +52,20 @@ public class ArbolBinario {
         return AB.getDerecho();
     }
     
-    public static boolean Pertenece(ArbolBinario AB,char dato){
+    public static boolean Pertenece(ArbolBinario AB,Character raiz){
         if(esABvacio(AB)){
             return false;
         }else{
-            if(AB.getItem()==dato){
+            if(AB.getItem()==raiz){
                 return true;
             }else{
-              return (Pertenece(AB.getIzquierdo(),dato) || Pertenece(AB.getDerecho(),dato)); 
+              return (Pertenece(AB.getIzquierdo(),raiz) || Pertenece(AB.getDerecho(),raiz)); 
             }
         }
     }
     
     
-    
+    /////////////////////////////////////////////////////////////////
     
     public ArbolBinario getIzquierdo() {
         return izquierdo;
@@ -81,11 +76,11 @@ public class ArbolBinario {
     }
 
     public char getItem() {
-        return item;
+        return raiz;
     }
 
-    public void setItem(char item) {
-        this.item = item;
+    public void setItem(Character raiz) {
+        this.raiz = raiz;
     }
 
     public ArbolBinario getDerecho() {
